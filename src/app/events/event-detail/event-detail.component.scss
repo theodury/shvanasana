@@ -1,0 +1,22 @@
+.card {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+      
+} 
+  
+.event-header {
+    position: absolute;
+    top: 24px;
+    width: 100%;
+    z-index: -1;
+    max-height: 10px;
+}
+
+.event-header img{
+    -webkit-filter: blur(10px) brightness(0.8) ;
+    -moz-filter: blur(10px)  brightness(0.8);
+    -o-filter: blur(10px)  brightness(0.8);
+    -ms-filter: blur(10px)  brightness(0.8);
+    filter: blur(100px) brightness(2.4);
+}
