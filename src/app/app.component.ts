@@ -10,9 +10,6 @@ export class AppComponent implements OnDestroy {
 
   mobileQuery: MediaQueryList;
 
-  fillerNav = ['Événement', 'Classement'];
-
-
   private _mobileQueryListener: () => void;
 
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
