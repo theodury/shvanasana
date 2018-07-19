@@ -11,29 +11,19 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 
-
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule }        from './app-routing.module';
-
-import { EventsModule } from './events/events.module';
-import { RankingComponent } from './ranking/ranking.component';
-import { EventDetailComponent } from './events/event-detail/event-detail.component';
-
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RankingComponent,
-    EventDetailComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     LayoutModule,
-    EventsModule,
     AppRoutingModule, 
     MatIconModule,
     MatSidenavModule,

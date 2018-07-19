@@ -6,6 +6,7 @@ import { EventsComponent } from './events.component';
 
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { EventDetailComponent } from './event-detail/event-detail.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatButtonModule
   ],
   declarations: [
-    EventsComponent
+    EventsComponent,
+    EventDetailComponent
   ]
 })
 export class EventsModule { }
