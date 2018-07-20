@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {HttpClientModule} from '@angular/common/http';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LayoutModule} from '@angular/cdk/layout';
 
@@ -37,5 +36,4 @@ import { AppRoutingModule }        from './app-routing.module';
 })
 export class AppModule { }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
 
