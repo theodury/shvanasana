@@ -19,17 +19,19 @@
       </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content class="container">
+    <mat-sidenav-content>
       <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
       <router-outlet></router-outlet>
-
-    </mat-sidenav-content>
+      <footer class="footer" >
+          <mat-toolbar color="primary">
+                <p>© 2018 - Les Étudiants De France</p>
+            </mat-toolbar>
+      </footer>
+    </mat-sidenav-content>    
   </mat-sidenav-container>
+  
 </div>
 
-<footer class="footer" >
-    <!-- <mat-card color="primary">Simple card</mat-card> -->
-</footer>
 
 
 

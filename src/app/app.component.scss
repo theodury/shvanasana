@@ -19,6 +19,7 @@
     /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
     flex: 1;
+
   }
   
   .is-mobile .sidenav-container {
@@ -26,25 +27,36 @@
        `<body>` to be our scrolling element for mobile layouts. */
     flex: 1 0 auto;
   }
+  
 
   .header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
-  }
-  
-  .container{
-    padding: 25px;
   }
 
   .flex{
     flex:1;
   }
 
-  .footer{
-    height: 25px; 
-    background-color: black;
-  }
-
   .mat-drawer {
     background-color: #fafafa;
   }
+
+  .footer{
+    margin-top:25px;
+  }
+
+  .footer p {
+    margin-left:auto;
+    margin-right:auto;  
+  }
+
+  mat-sidenav-container {
+    display: flex;
+    flex-direction: column;
+    > *:not(router-outlet) {
+      flex: 1;
+      display: block;
+    }
+  }
+
