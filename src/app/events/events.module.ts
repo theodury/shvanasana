@@ -6,6 +6,10 @@ import { EventsComponent } from './events.component';
 
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatIconModule} from '@angular/material/icon';
+
+
 
 import { EventDetailComponent } from './event-detail/event-detail.component';
 
@@ -15,7 +19,9 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
     CommonModule,
     EventsRoutingModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatGridListModule,
+    MatIconModule
   ],
   declarations: [
     EventsComponent,

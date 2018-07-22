@@ -1,9 +1,12 @@
 .card {
-    max-width: 900px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-      
 } 
+
+.mat-card{
+    padding: 0px;
+}
   
 .event-header {
     position: absolute;
@@ -19,4 +22,33 @@
     -o-filter: blur(10px)  brightness(0.8);
     -ms-filter: blur(10px)  brightness(0.8);
     filter: blur(100px) brightness(2.4);
+}
+
+.border{
+    border-style: solid;
+    border-color: #D2D6DF;
+    border-width: 1px 0;
+}
+
+.month{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text{
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.25em;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.button{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
