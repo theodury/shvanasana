@@ -1,54 +1,55 @@
-<header class="event-header">
-    <img mat-card-image src="/assets/img/ikea.jpg" alt="Ikea Event">
+<div [ngStyle]= "{ 'padding-top': paddingTop }">
+  <header class="event-header">
+    <img mat-card-image src="/assets/img/pillow.jpg" alt="Ikea Event">
   </header>
-  
 
-<mat-card class="card flex">
-  <mat-card-content>
 
-    <mat-grid-list cols="{{totalColumn}}" rowHeight="100px" (window:resize)="onResize($event)">
-      <mat-grid-tile [colspan]="threeColumn" [rowspan]="totalRow">
-        <img mat-card-image src="/assets/img/ikea.jpg" alt="Ikea Event">
-      </mat-grid-tile>
+  <mat-card class="card flex">
+    <mat-card-content>
 
-      <mat-grid-tile class="card" [colspan]="1" [rowspan]="1">
+      <mat-grid-list cols="{{totalColumn}}" rowHeight="100px" (window:resize)="onResize($event)">
+        <mat-grid-tile [colspan]="threeColumn" [rowspan]="totalRow">
+          <img mat-card-image src="/assets/img/pillow.jpg" alt="Ikea Event">
+        </mat-grid-tile>
+
+        <mat-grid-tile class="card" [colspan]="1" [rowspan]="1">
           <p class="text">Cache Cache Géant</p>
-      </mat-grid-tile>
+        </mat-grid-tile>
 
-      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
           <p class="text">20 novembre 2018</p>
-      </mat-grid-tile>
+        </mat-grid-tile>
 
-      <mat-grid-tile class="card" [colspan]="1" [rowspan]="1">
-        <p class="text">Gratuit</p>
-      </mat-grid-tile>
+        <mat-grid-tile class="card" [colspan]="1" [rowspan]="1">
+          <p class="text">Gratuit</p>
+        </mat-grid-tile>
 
-      <mat-grid-tile [colspan]="threeColumn" [rowspan]="1">   
-         <button mat-icon-button color="primary">
+        <mat-grid-tile [colspan]="threeColumn" [rowspan]="1">
+          <button mat-icon-button color="primary">
             <mat-icon>
-                share
+              share
             </mat-icon>
           </button>
-      </mat-grid-tile>
-      
-      <mat-grid-tile class="button-row" [colspan]="1" [rowspan]="1">
+        </mat-grid-tile>
+
+        <mat-grid-tile class="button-row" [colspan]="1" [rowspan]="1">
           <button mat-raised-button color="accent" class="button">FAIRE LA FÊTE</button>
-      </mat-grid-tile>
+        </mat-grid-tile>
 
 
-      <mat-grid-tile [colspan]="totalColumn" [rowspan]="10">
-        <p>
-          Quoi de mieux qu'un Cache Cache Géant dans IKEA pour célébrer la Journée Internationale de l'Enfance !!! 🎉 ⏰...3...2...1....
-          🗣J'ARRIVEEEEEEE !!!!!!!!!!!!!!!!!!!!!!!! Quoi de mieux qu'un Cache Cache Géant dans IKEA pour célébrer la Journée
-          Internationale de l'Enfance !!! 🎉 Quoi de mieux qu'un Cache Cache Géant dans IKEA pour célébrer la Journée Internationale
-          de l'Enfance !!! 🎉 Quoi de mieux qu'un Cache Cache Géant dans IKEA pour célébrer la Journée Internationale de
-          l'Enfance !!! 🎉 Quoi de mieux qu'un Cache Cache Géant dans IKEA pour célébrer la Journée Internationale de l'Enfance
+        <mat-grid-tile [colspan]="totalColumn" [rowspan]="3">
+          <p>
+            Quoi de mieux qu'un Cache Cache Géant dans IKEA pour célébrer la Journée Internationale de l'Enfance !!! 🎉 ⏰...3...2...1....
+            🗣J'ARRIVEEEEEEE !!!!!!!!!!!!!!!!!!!!!!!! Quoi de mieux qu'un Cache Cache Géant dans IKEA pour célébrer la Journée
+            Internationale de l'Enfance !!! 🎉 Quoi de mieux qu'un Cache Cache Géant dans IKEA pour célébrer la Journée Internationale
+            de l'Enfance !!! 🎉 Quoi de mieux qu'un Cache Cache Géant dans IKEA pour célébrer la Journée Internationale de
+            l'Enfance !!! 🎉 Quoi de mieux qu'un Cache Cache Géant dans IKEA pour célébrer la Journée Internationale de l'Enfance
+            FIN
 
-          FIN
+        </mat-grid-tile>
+      </mat-grid-list>
 
-      </mat-grid-tile>
-    </mat-grid-list>
+    </mat-card-content>
 
-  </mat-card-content>
-
-</mat-card>
+  </mat-card>
+</div>

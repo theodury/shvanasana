@@ -16,8 +16,8 @@ export class EventDetailComponent implements OnInit {
 
   totalColumn: any = 4;
   threeColumn: any = 3;
-
   totalRow: any = 4;
+  paddingTop = "25px";
   
 
 
@@ -45,12 +45,14 @@ export class EventDetailComponent implements OnInit {
       this.totalColumn = 4;
       this.threeColumn = 3;
       this.totalRow = 4;
+      this.paddingTop = "25px;";
     }
 
     if (width < 750) {
       this.totalColumn = 1;
       this.threeColumn = 1;
       this.totalRow = 2;
+      this.paddingTop = "0px;";
     }
   }
 
