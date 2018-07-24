@@ -11,6 +11,9 @@ import {MatIconModule} from '@angular/material/icon';
 
 import { EventDetailComponent } from './event-detail/event-detail.component';
 
+import {MatChipsModule} from '@angular/material/chips';
+
+
 
 @NgModule({
   imports: [
@@ -19,7 +22,8 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
     MatCardModule,
     MatButtonModule,
     MatGridListModule,
-    MatIconModule
+    MatIconModule,
+    MatChipsModule
   ],
   declarations: [
     EventsComponent,
