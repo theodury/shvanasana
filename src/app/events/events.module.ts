@@ -9,8 +9,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 
-
-
 import { EventDetailComponent } from './event-detail/event-detail.component';
 
 

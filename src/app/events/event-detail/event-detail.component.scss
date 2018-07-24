@@ -51,4 +51,20 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10px;
 }
+
+  mat-icon {
+    font-size: 56px;
+    height: 56px;
+    width: 56px;
+    line-height: 56px;
+  }
+  
+  .flex{
+    flex:1;
+  }
+
+  :host /deep/ .mat-fab .mat-button-wrapper {
+      padding: 0px;
+  }

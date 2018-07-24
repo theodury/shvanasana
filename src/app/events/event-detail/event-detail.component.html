@@ -1,35 +1,52 @@
-<div [ngStyle]= "{ 'padding-top': paddingTop }">
+<div [ngStyle]="{ 'padding-top': paddingTop }">
   <header class="event-header">
     <img mat-card-image src="/assets/img/pillow.jpg" alt="Ikea Event">
   </header>
 
-
   <mat-card class="card flex">
     <mat-card-content>
-
       <mat-grid-list cols="{{totalColumn}}" rowHeight="100px" (window:resize)="onResize($event)">
         <mat-grid-tile [colspan]="threeColumn" [rowspan]="totalRow">
           <img mat-card-image src="/assets/img/pillow.jpg" alt="Ikea Event">
         </mat-grid-tile>
-
         <mat-grid-tile class="card" [colspan]="1" [rowspan]="1">
           <p class="text">Cache Cache Géant</p>
         </mat-grid-tile>
-
         <mat-grid-tile [colspan]="1" [rowspan]="1">
           <p class="text">20 novembre 2018</p>
         </mat-grid-tile>
-
         <mat-grid-tile class="card" [colspan]="1" [rowspan]="1">
           <p class="text">Gratuit</p>
         </mat-grid-tile>
-
         <mat-grid-tile [colspan]="threeColumn" [rowspan]="1">
-          <button mat-icon-button color="primary">
-            <mat-icon>
-              share
-            </mat-icon>
+          <div class="flex"></div>
+          <div class="flex"></div>
+          <button mat-fab color="">
+            <mat-icon svgIcon="facebook"></mat-icon>
           </button>
+          <div class="flex"></div>
+          <button mat-fab color="">
+            <mat-icon svgIcon="twitter"></mat-icon>
+          </button>
+          <div class="flex"></div>
+          <button mat-fab color="">
+            <mat-icon svgIcon="instagram"></mat-icon>
+          </button>
+          <div class="flex"></div>
+          <button mat-fab color="">
+            <mat-icon svgIcon="messenger"></mat-icon>
+          </button>
+          <div class="flex"></div>
+          <button mat-fab color="">
+            <mat-icon svgIcon="email"></mat-icon>
+          </button>
+          <div class="flex"></div>
+          <button mat-fab color="">
+            <mat-icon svgIcon="copy"></mat-icon>
+          </button>
+          <div class="flex"></div>
+          <div class="flex"></div>
+
         </mat-grid-tile>
 
         <mat-grid-tile class="button-row" [colspan]="1" [rowspan]="1">
