@@ -11,15 +11,15 @@
                  [opened]= "mobileQuery.matches ? false : true">
       <mat-nav-list>
         
-        <a (click)="mobileQuery.matches ? snav.toggle() : falses"
+        <a (click)="mobileQuery.matches ? snav.toggle() : false"
             routerLink=".">
             <img src="/assets/img/logo.png" style="width: 200px;">
         </a>
-        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : falses" 
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" 
         routerLink="/events">Événement</a>
-        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : falses" 
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" 
         routerLink="/cities">Villes</a>
-        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : falses" 
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" 
         routerLink="/ranking">Classement</a>
       </mat-nav-list>
     </mat-sidenav>
