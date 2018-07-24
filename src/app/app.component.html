@@ -10,12 +10,16 @@
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <mat-nav-list>
         
-        <a routerLink=".">
+        <a (click)="mobileQuery.matches ? snav.toggle() : falses"
+            routerLink=".">
             <img src="/assets/img/logo.png" style="width: 200px;">
         </a>
-        <a mat-list-item routerLink="/events">Événement</a>
-        <a mat-list-item routerLink="/cities">Villes</a>
-        <a mat-list-item routerLink="/ranking">Classement</a>
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : falses" 
+        routerLink="/events">Événement</a>
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : falses" 
+        routerLink="/cities">Villes</a>
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : falses" 
+        routerLink="/ranking">Classement</a>
       </mat-nav-list>
     </mat-sidenav>
 
