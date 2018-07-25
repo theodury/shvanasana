@@ -11,15 +11,19 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
+
 import { AppRoutingModule } from './app-routing.module';
 
 import { MatIconRegistry } from "@angular/material";
 import { DomSanitizer } from "@angular/platform-browser";
 
+import { AuthenticationService, UserService, AlertService } from './_services';
+import { AuthGuard } from './_guards';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -33,8 +37,9 @@ import { DomSanitizer } from "@angular/platform-browser";
     MatListModule,
     MatButtonModule,
     MatCardModule
+
   ],
-  providers: [],
+  providers: [AuthGuard, AuthenticationService, UserService, AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

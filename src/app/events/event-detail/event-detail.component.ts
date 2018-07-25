@@ -20,8 +20,6 @@ export class EventDetailComponent implements OnInit {
   totalRow: any = 7;
   paddingTop = "25px";
   
-
-
   constructor() {
     this.adaptScreen(window.innerWidth);
    }
