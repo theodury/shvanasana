@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CitiesComponent implements OnInit {
 
-  constructor() { }
+  totalColumn: any = 8;
+
+  constructor() {
+    this.adaptScreen(window.innerWidth);
+   }
 
   ngOnInit() {
   }
 
+  onResize(event) {
+    this.adaptScreen(event.target.innerWidth);
+  }
+  
+  adaptScreen(width){
+    if (width < 950) {
+      this.totalColumn = 6;
+    }
+
+    if (width < 750) {
+      this.totalColumn = 2;
+    }
+  }
 }

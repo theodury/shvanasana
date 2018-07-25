@@ -5,13 +5,15 @@ import { CitiesRoutingModule } from './cities-routing.module';
 import { CitiesComponent } from './cities.component';
 
 import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
   imports: [
     CommonModule,
     CitiesRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    MatGridListModule
   ],
   declarations: [CitiesComponent]
 })

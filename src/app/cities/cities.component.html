@@ -1,15 +1,39 @@
 <h2 style="padding-bottom: 50px;">Trouve la communauté la plus proche de toi </h2>
 
 
-<div class="button-row">
+<div >
 
-  <a mat-stroked-button color="accent" 
-  href="https://www.facebook.com/groups/EtudiantsDeMontpellier/">Montpellier</a>
-
-  <a mat-stroked-button color="accent" 
-  href="https://www.facebook.com/groups/LesEtudiantsDuMans/">Mans</a>
-
-  <a mat-stroked-button color="accent" 
-  href="https://www.facebook.com/groups/EtudiantsDePau/">Pau</a>
+  <mat-grid-list cols="{{totalColumn}}" rowHeight="50px" (window:resize)="onResize($event)">
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <a mat-stroked-button color="accent">Montpellier</a>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <a mat-stroked-button color="accent">Montpellier</a>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <a mat-stroked-button color="accent">Montpellier</a>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <a mat-stroked-button color="accent">Montpellier</a>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <a mat-stroked-button color="accent">Montpellier</a>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <a mat-stroked-button color="accent">Montpellier</a>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <a mat-stroked-button color="accent">Montpellier</a>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <a mat-stroked-button color="accent">Montpellier</a>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <a mat-stroked-button color="accent">Montpellier</a>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">
+      <a mat-stroked-button color="accent">Montpellier</a>
+    </mat-grid-tile>
+  </mat-grid-list>
 
 </div>
