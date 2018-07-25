@@ -1,42 +1,40 @@
 <div class="app-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="toolbar">
-    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
     <div class="flex"></div>
     <div mat-card-avatar class="header-image"></div>
   </mat-toolbar>
-  <mat-sidenav-container class="sidenav-container"
-                         [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
-    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
-                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
-                 [opened]= "mobileQuery.matches ? false : true">
+  <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
+      [opened]="mobileQuery.matches ? false : true">
       <mat-nav-list>
-        
-        <a (click)="mobileQuery.matches ? snav.toggle() : false"
-            routerLink=".">
-            <img src="/assets/img/logo.png" style="width: 200px;">
+
+        <a (click)="mobileQuery.matches ? snav.toggle() : false" routerLink=".">
+          <img src="/assets/img/logo.png" style="width: 200px;">
         </a>
-        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" 
-        routerLink="/events">Événement</a>
-        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" 
-        routerLink="/cities">Villes</a>
-        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" 
-        routerLink="/ranking">Classement</a>
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" routerLink="/events">
+          <mat-icon>event</mat-icon>&nbsp;&nbsp;Événement
+        </a>
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" routerLink="/cities">
+          <mat-icon>location_city</mat-icon>&nbsp;&nbsp;Villes
+        </a>
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" routerLink="/ranking">
+          <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Classement
+        </a>
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>
       <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
       <router-outlet></router-outlet>
-      <footer class="footer" >
-          <mat-toolbar color="primary">
-                <p>© 2018 - Les Étudiants De France</p>
-            </mat-toolbar>
+      <footer class="footer">
+        <mat-toolbar color="primary">
+          <p>© 2018 - Les Étudiants De France</p>
+        </mat-toolbar>
       </footer>
-    </mat-sidenav-content>    
+    </mat-sidenav-content>
   </mat-sidenav-container>
-  
+
 </div>
-
-
-
-
