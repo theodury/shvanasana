@@ -14,12 +14,25 @@ export interface Tile {
 })
 export class EventDetailComponent implements OnInit {
 
-  totalColumn: any = 4;
-  threeColumn: any = 3;
-  oneColumn: any = 1;
-  totalRow: any = 7;
-  paddingTop = "25px";
+  totalColumn;
+  rowHeight;
+
+  imgColumn;
+  imgRow;
+
+  socialColumn;
+  socialRow;
+  oneColumn;
+
+  titleColumn;
+  infoColumn;
+  adresseColumn;
+  adresseRow;
+  dateColumn;
+  dateRow;
+  paddingTop;
   
+
   constructor() {
     this.adaptScreen(window.innerWidth);
    }
@@ -40,20 +53,37 @@ export class EventDetailComponent implements OnInit {
   }
   
   adaptScreen(width){
-    if (width < 950) {
-      this.totalColumn = 4;
-      this.threeColumn = 3;
-      this.oneColumn = 1;
-      this.totalRow = 7;
-      this.paddingTop = "25px;";
+    if (width >= 750) {
+      this.paddingTop = "25px";
+      this.totalColumn = 12;
+      this.rowHeight = "80px";
+      this.imgColumn = 11;
+      this.imgRow = 6;
+      this.socialColumn = 1;
+      this.socialRow = 1;
+      this.titleColumn = 3;
+      this.infoColumn = 3;
+      this.dateColumn = 2;
+      this.dateRow = 1;
+      this.adresseColumn = 2;
+      this.adresseRow = 1;
     }
 
     if (width < 750) {
+      this.paddingTop = "0px";
       this.totalColumn = 2;
-      this.threeColumn = 2;
-      this.oneColumn = 2;
-      this.totalRow = 4;
-      this.paddingTop = "0px;";
+      this.rowHeight = "50px";
+      this.imgColumn = 2;
+      this.imgRow = 4;
+      this.socialColumn = 0;
+      this.socialRow = 0;
+      this.titleColumn = 2;
+      this.infoColumn = 2;
+      this.dateColumn = 1;
+      this.dateRow = 2;
+      this.adresseColumn = 1;
+      this.adresseRow = 2;
+
     }
   }
 

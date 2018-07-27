@@ -1,18 +1,47 @@
 <div [ngStyle]="{ 'padding-top': paddingTop }">
   <header class="event-header">
-    <img mat-card-image src="/assets/img/ikea.jpg" alt="Ikea Event">
+    <img mat-card-image class="img-header" src="/assets/img/ikea.jpg" alt="Ikea Event">
   </header>
-
   <mat-card class="card flex">
     <mat-card-content>
-      <mat-grid-list cols="{{totalColumn}}" rowHeight="50px" (window:resize)="onResize($event)">
-        <mat-grid-tile [colspan]="threeColumn" [rowspan]="totalRow">
+      <mat-grid-list cols="{{totalColumn}}" rowHeight="{{rowHeight}}" (window:resize)="onResize($event)">
+        <mat-grid-tile [colspan]="imgColumn" [rowspan]="imgRow">
           <img mat-card-image src="/assets/img/ikea.jpg" alt="Ikea Event">
         </mat-grid-tile>
-        <mat-grid-tile class="card" [colspan]="oneColumn" [rowspan]="1">
+        <mat-grid-tile class="card" [colspan]="socialColumn" [rowspan]="socialRow">
+          <button mat-fab color="" class="button-share">
+            <mat-icon class="size-mat-icon" svgIcon="facebook"></mat-icon>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile class="card" [colspan]="socialColumn" [rowspan]="socialRow">
+          <button mat-fab color="" class="button-share">
+            <mat-icon class="size-mat-icon" svgIcon="twitter"></mat-icon>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile class="card" [colspan]="socialColumn" [rowspan]="socialRow">
+          <button mat-fab color="" class="button-share">
+            <mat-icon class="size-mat-icon" svgIcon="instagram"></mat-icon>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile class="card" [colspan]="socialColumn" [rowspan]="socialRow">
+          <button mat-fab color="" class="button-share">
+            <mat-icon class="size-mat-icon" svgIcon="messenger"></mat-icon>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile class="card" [colspan]="socialColumn" [rowspan]="socialRow">
+          <button mat-fab color="" class="button-share">
+            <mat-icon class="size-mat-icon" svgIcon="email"></mat-icon>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile class="card" [colspan]="socialColumn" [rowspan]="socialRow">
+          <button mat-fab color="" class="button-share">
+            <mat-icon class="size-mat-icon" svgIcon="copy"></mat-icon>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="titleColumn" [rowspan]="1">
           <h2>Cache Cache Géant</h2>
         </mat-grid-tile>
-        <mat-grid-tile class="card" [colspan]="oneColumn" [rowspan]="1">
+        <mat-grid-tile [colspan]="infoColumn" [rowspan]="1">
           <mat-chip-list>
             <mat-chip color="warn" selected>
               <mat-icon>location_on</mat-icon>&nbsp;National
@@ -23,56 +52,28 @@
             </mat-chip>
           </mat-chip-list>
         </mat-grid-tile>
-        <mat-grid-tile [colspan]="1" [rowspan]="2">
-          <div>
+
+        <mat-grid-tile [colspan]="dateColumn" [rowspan]="dateRow">
+          <div class="info">
             <h3>Date et heure</h3>
-            <p>20 novembre 2018</p>
-            <p>20:00 - 3:00</p>
+            <span>20 novembre 2018</span>
+            <span>20:00 - 3:00</span>
+            <span>&nbsp;</span>
           </div>
         </mat-grid-tile>
-        <mat-grid-tile class="card" [colspan]="1" [rowspan]="3">
-          <div>
+        <mat-grid-tile [colspan]="adresseColumn" [rowspan]="adresseRow">
+          <div class="info">
             <h3>Adresse</h3>
-            <p>Hôtel Bedford</p>
-            <p>17 rue de l'Arcade</p>
-            <p>75008 Paris</p>
+            <span>Hôtel Bedford</span>
+            <span>17 rue de l'Arcade</span>
+            <span>75008 Paris</span>
           </div>
         </mat-grid-tile>
-        
-          <mat-grid-tile [colspan]="threeColumn" [rowspan]="2">
-            <div class="flex"></div>
-            <div class="flex"></div>
-            <button mat-fab color="">
-              <mat-icon class="size-mat-icon" svgIcon="facebook"></mat-icon>
-            </button>
-            <div class="flex"></div>
-            <button mat-fab color="">
-              <mat-icon class="size-mat-icon" svgIcon="twitter"></mat-icon>
-            </button>
-            <div class="flex"></div>
-            <button mat-fab color="">
-              <mat-icon class="size-mat-icon" svgIcon="instagram"></mat-icon>
-            </button>
-            <div class="flex"></div>
-            <button mat-fab color="">
-              <mat-icon class="size-mat-icon" svgIcon="messenger"></mat-icon>
-            </button>
-            <div class="flex"></div>
-            <button mat-fab color="">
-              <mat-icon class="size-mat-icon" svgIcon="email"></mat-icon>
-            </button>
-            <div class="flex"></div>
-            <button mat-fab color="">
-              <mat-icon class="size-mat-icon" svgIcon="copy"></mat-icon>
-            </button>
-            <div class="flex"></div>
-            <div class="flex"></div>
 
-          </mat-grid-tile>
 
-          <mat-grid-tile class="button-row" [colspan]="oneColumn" [rowspan]="2">
-            <button routerLink="join" mat-stroked-button color="accent" class="button">FAIRE LA FÊTE</button>
-          </mat-grid-tile>
+        <mat-grid-tile class="button-row" [colspan]="2" [rowspan]="1">
+          <button routerLink="join" mat-stroked-button color="accent" class="button">Faire la fête</button>
+        </mat-grid-tile>
 
         <mat-grid-tile [colspan]="totalColumn" [rowspan]="6">
           <div class="description">
@@ -86,6 +87,40 @@
             </p>
           </div>
 
+        </mat-grid-tile>
+
+        <mat-grid-tile class="card" [colspan]="1" [rowspan]="1">
+          <button mat-fab color="" class="button-share">
+            <mat-icon class="size-mat-icon" svgIcon="facebook"></mat-icon>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile class="card" [colspan]="1" [rowspan]="1">
+          <button mat-fab color="" class="button-share">
+            <mat-icon class="size-mat-icon" svgIcon="twitter"></mat-icon>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile class="card" [colspan]="1" [rowspan]="1">
+          <button mat-fab color="" class="button-share">
+            <mat-icon class="size-mat-icon" svgIcon="instagram"></mat-icon>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile class="card" [colspan]="1" [rowspan]="1">
+          <button mat-fab color="" class="button-share">
+            <mat-icon class="size-mat-icon" svgIcon="messenger"></mat-icon>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile class="card" [colspan]="1" [rowspan]="1">
+          <button mat-fab color="" class="button-share">
+            <mat-icon class="size-mat-icon" svgIcon="email"></mat-icon>
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile class="card" [colspan]="1" [rowspan]="1">
+          <button mat-fab color="" class="button-share">
+            <mat-icon class="size-mat-icon" svgIcon="copy"></mat-icon>
+          </button>
+        </mat-grid-tile>
+        
+        <mat-grid-tile class="card" [colspan]="2" [rowspan]="1">
         </mat-grid-tile>
       </mat-grid-list>
 
