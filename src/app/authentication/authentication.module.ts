@@ -6,8 +6,10 @@ import { RegisterComponent } from './register/register.component';
 
 import { ReactiveFormsModule }    from '@angular/forms';
 
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatFormFieldModule, MatInputModule, MatButtonModule, MatCardModule } from '@angular/material';
 import { AuthenticationRoutingModule } from './authentication-routing.module';
+
+
 
 
 
@@ -17,7 +19,9 @@ import { AuthenticationRoutingModule } from './authentication-routing.module';
         AuthenticationRoutingModule,
         ReactiveFormsModule,
         MatInputModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatButtonModule,
+        MatCardModule
     ],
     declarations: [
         LoginComponent,
