@@ -14,9 +14,9 @@
             <mat-form-field class="button" color="primary" appearance="outline">
                 <mat-label for="lastName">Nom</mat-label>
                 <input matInput placeholder="Nom" type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
-                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                <mat-hint *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
                     <div *ngIf="f.lastName.errors.required">Un nom est requis</div>
-                </div>
+                </mat-hint>
             </mat-form-field>
 
         </div>
