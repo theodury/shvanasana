@@ -126,6 +126,11 @@ export class HomeComponent implements OnInit {
         this.mouse = new Mouse(event);
       });
 
+      window.addEventListener('touchend',
+      (event) => {
+        delete this.mouse;
+      });
+
 
     for (var i = 0; i < 300; i++) {
       var radius = 30;
