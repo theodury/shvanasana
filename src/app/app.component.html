@@ -7,21 +7,21 @@
     <div mat-card-avatar class="header-image"></div>
   </mat-toolbar>
   <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
-    <mat-sidenav #snav [mode]="over" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
-      [opened]="false">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'over'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56"
+      [opened]="mobileQuery.matches ? false : false">
       <mat-nav-list>
         <a (click)="snav.toggle()" routerLink=".">
           <img src="/assets/img/logo.png" style="width: 200px;">
         </a>
-        <a mat-list-item (click)="snav.toggle()" routerLink="/events">
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" routerLink="/events">
           <button mat-stroked-button color="warn" class="button align">
               <mat-icon>event</mat-icon>&nbsp;&nbsp;Événement</button>
         </a>
-        <a mat-list-item (click)="snav.toggle()" routerLink="/cities">
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" routerLink="/cities">
           <button mat-stroked-button color="warn" class="button align">
               <mat-icon>location_city</mat-icon>&nbsp;&nbsp;Ville</button>
         </a>
-        <a mat-list-item (click)="snav.toggle()" routerLink="/ranking">
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" routerLink="/ranking">
           <button mat-stroked-button color="warn" class="button align">
               <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Classement</button>
         </a>
