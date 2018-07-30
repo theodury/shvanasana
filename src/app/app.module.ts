@@ -19,11 +19,13 @@ import { DomSanitizer } from "@angular/platform-browser";
 
 import { AuthenticationService, UserService, AlertService } from './_services';
 import { AuthGuard } from './_guards';
+import { CanvasComponent } from './canvas/canvas.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CanvasComponent
   ],
   imports: [
     BrowserModule,

@@ -25,11 +25,20 @@
           <button mat-stroked-button color="warn" class="button align">
               <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Classement</button>
         </a>
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" routerLink="/partenaire">
+          <button mat-stroked-button color="warn" class="button align">
+              <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Partenaire</button>
+        </a>
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" routerLink="/medias">
+          <button mat-stroked-button color="warn" class="button align">
+              <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Médias</button>
+        </a>
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>
       <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
+      <app-canvas></app-canvas>
       <router-outlet></router-outlet>
       <footer class="footer">
         <mat-toolbar color="primary">
