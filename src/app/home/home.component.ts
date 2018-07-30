@@ -121,7 +121,7 @@ export class HomeComponent implements OnInit {
         this.mouse = new Mouse(event);
       });
 
-      window.addEventListener('touchmove',
+      window.addEventListener('touchstart',
       (event) => {
         this.mouse = new Mouse(event);
       });
