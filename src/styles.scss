@@ -19,6 +19,8 @@ body {
 
 body, html {
   height:100%;
+  box-sizing: content-box;
+  width: 100%;
 }
 
 .button{
