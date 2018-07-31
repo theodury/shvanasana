@@ -13,23 +13,23 @@
         <a (click)="snav.toggle()" routerLink=".">
           <img src="/assets/img/logo.png" style="width: 200px;">
         </a>
-        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" routerLink="/events">
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/events">
           <button mat-stroked-button color="warn" class="button align">
               <mat-icon>event</mat-icon>&nbsp;&nbsp;Événement</button>
         </a>
-        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" routerLink="/cities">
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/cities">
           <button mat-stroked-button color="warn" class="button align">
               <mat-icon>location_city</mat-icon>&nbsp;&nbsp;Ville</button>
         </a>
-        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" routerLink="/ranking">
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/ranking">
           <button mat-stroked-button color="warn" class="button align">
               <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Classement</button>
         </a>
-        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" routerLink="/partenaire">
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/partenaire">
           <button mat-stroked-button color="warn" class="button align">
               <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Partenaire</button>
         </a>
-        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : false" routerLink="/medias">
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/medias">
           <button mat-stroked-button color="warn" class="button align">
               <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Médias</button>
         </a>
