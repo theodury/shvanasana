@@ -15,23 +15,23 @@
         </a>
         <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/events">
           <button mat-stroked-button color="warn" class="button align">
-              <mat-icon>event</mat-icon>&nbsp;&nbsp;Événement</button>
+            <mat-icon>event</mat-icon>&nbsp;&nbsp;Événement</button>
         </a>
         <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/cities">
           <button mat-stroked-button color="warn" class="button align">
-              <mat-icon>location_city</mat-icon>&nbsp;&nbsp;Ville</button>
+            <mat-icon>location_city</mat-icon>&nbsp;&nbsp;Ville</button>
         </a>
         <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/ranking">
           <button mat-stroked-button color="warn" class="button align">
-              <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Classement</button>
+            <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Classement</button>
         </a>
         <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/partenaire">
           <button mat-stroked-button color="warn" class="button align">
-              <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Partenaire</button>
+            <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Partenaire</button>
         </a>
         <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/medias">
           <button mat-stroked-button color="warn" class="button align">
-              <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Médias</button>
+            <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Médias</button>
         </a>
       </mat-nav-list>
     </mat-sidenav>
@@ -39,11 +39,15 @@
     <mat-sidenav-content>
       <!-- <p *ngFor="let content of fillerContent">{{content}}</p> -->
       <app-canvas></app-canvas>
-      <router-outlet></router-outlet>
-      <footer class="footer">
-        <mat-toolbar color="primary">
-          <p>© 2018 - Les Étudiants De France</p>
-        </mat-toolbar>
+      <div id="container">
+        <div id="main">
+          <router-outlet></router-outlet>
+          <footer class="footer">
+        </div>
+      </div>
+      <mat-toolbar color="primary">
+        <p>© 2018 - Les Étudiants De France</p>
+      </mat-toolbar>
       </footer>
     </mat-sidenav-content>
   </mat-sidenav-container>
