@@ -169,7 +169,7 @@ export class CanvasComponent implements OnInit {
     for (var i = 0; i < 400; i++) {
       var radius = 30;
       var x = Math.random() * (innerWidth - radius * 2) + radius;
-      var y = Math.random() * (innerHeight - (radius + this.toolbar) * 2) + (radius + this.toolbar);
+      var y = Math.random() * (innerHeight - (radius + 2 *this.toolbar) * 2) + (radius + this.toolbar);
       var dx = (Math.random() - 0.5);
       var dy = (Math.random() - 0.5);
       this.circleArray.push(new Circle(this.context, x, y, dx, dy));
