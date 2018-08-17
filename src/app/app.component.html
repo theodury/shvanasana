@@ -11,7 +11,7 @@
       [opened]="mobileQuery.matches ? false : false">
       <mat-nav-list>
         <a (click)="snav.toggle()" routerLink=".">
-          <img src="/assets/img/logo.png" style="width: 200px;">
+          <img src="/assets/img/logo.png">
         </a>
         <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/events">
           <button mat-stroked-button color="warn" class="button align">
@@ -21,17 +21,13 @@
           <button mat-stroked-button color="warn" class="button align">
               <mat-icon>location_city</mat-icon>&nbsp;&nbsp;Ville</button>
         </a>
+        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/ambassador">
+          <button mat-stroked-button color="warn" class="button align">
+              <mat-icon>accessibility_new</mat-icon>&nbsp;&nbsp;Ambassadeur</button>
+        </a>
         <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/ranking">
           <button mat-stroked-button color="warn" class="button align">
               <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Classement</button>
-        </a>
-        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/partenaire">
-          <button mat-stroked-button color="warn" class="button align">
-              <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Partenaire</button>
-        </a>
-        <a mat-list-item (click)="mobileQuery.matches ? snav.toggle() : snav.toggle()" routerLink="/medias">
-          <button mat-stroked-button color="warn" class="button align">
-              <mat-icon>format_list_numbered</mat-icon>&nbsp;&nbsp;Médias</button>
         </a>
       </mat-nav-list>
     </mat-sidenav>

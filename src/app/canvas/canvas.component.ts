@@ -24,11 +24,11 @@ class Circle {
   color;
 
   colorArray = [
-    '#F46F5E',
-    '#F89284',
-    '#F9B3AA',
-    '#Ef5350',
-    '#FCF2F0'
+    'rgba(244,111,94,0.4)',
+    'rgba(248,146,132,0.4)',
+    'rgba(249,179,170,0.4)',
+    'rgba(239,83,80,0.4)',
+    'rgba(252,242,240,0.4)'
   ];
 
   constructor(context, x, y, dx, dy) {
@@ -46,7 +46,6 @@ class Circle {
     this.context.beginPath();
     this.context.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
     this.context.fillStyle = this.color;
-    this.context.stroke();
     this.context.fill();
   }
 

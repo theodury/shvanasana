@@ -1,50 +1,64 @@
 <div class="center">
-  <br>
-  <br>
-  <br>
-  <h2 class="title red-medium-light">Prêt à faire</h2>
-  <h2 class="title red-medium-light"> la fête ?</h2>
+<section>
+  <h2 class="title" style="z-index: 10; color: aliceblue">Prêt à faire</h2>
+  <h2 class="title"> la fête ?</h2>
 
-  <mat-card class="card-box">
-    <mat-card-title class="red card-title">Célébrer</mat-card-title>
-    <img mat-card-image src="/assets/img/celebrate.jpg" alt="Photo of a Shiba Inu">
-  </mat-card>
 
-  <mat-card class="card-box">
-    <mat-card-title class="red card-title">S'éclater</mat-card-title>
-    <img mat-card-image src="/assets/img/fun.jpg" alt="Photo of a Shiba Inu">
-  </mat-card>
-
-  <mat-card class="card-box">
-    <mat-card-title class="red card-title">Plaisir</mat-card-title>
-    <img mat-card-image src="/assets/img/party.jpg" alt="Photo of a Shiba Inu">
-  </mat-card>
-
-  <br>
-  <br>
-  <br>
-  <h2 class="title red">Vous êtes au bonne endroit !!! </h2>
-
-  <br>
-  <br>
-  <br>
-  <div align="center">
-    <iframe height="425px;" width="75%" src="https://www.youtube.com/embed/Lij6nT_MezI?rel=0&amp;controls=1&amp;showinfo=0&autoplay=1&vq=highres&mute=1"
+  <div class="background" style="z-index: -1;">
+    <iframe height="100%;" width="100%" src="https://www.youtube.com/embed/Lij6nT_MezI?rel=0&amp;controls=1&amp;showinfo=0&autoplay=1&vq=highres"
       frameborder="0" allow="autoplay; encrypted-media" class="video">
     </iframe>
   </div>
 
-  <br>
-  <br>
-  <br>
-  <h2 class="title red-light">Nos évenements</h2>
+</section>
+<section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  
+
 
   <br>
   <br>
   <br>
+  </section>
+  <h2 class="title">Vous êtes au bon endroit</h2>
+  
+  <mat-card class="card-img" routerLink="/events">
+    <img mat-card-image src="/assets/img/events.jpg" alt="events">
+  </mat-card>
 
-  <a routerLink="/events/1" class="unlink">
-    <mat-card class="card-box">
+
+  <mat-card class="card-img"  routerLink="/cities">
+    <img mat-card-image src="/assets/img/city.jpg" alt="city">
+  </mat-card>
+
+  <mat-card class="card-img" routerLink="/events">
+    <img mat-card-image src="/assets/img/party.jpg" alt="events">
+  </mat-card>
+
+  <br>
+  <br>
+  <br>
+  <h2 class="title">Nos évenements</h2>
+
+    <mat-card class="card" routerLink="/events/1">
       <mat-card-header>
         <mat-card-title>Cache Cache GEANT Ikea </mat-card-title>
         <mat-card-subtitle>Mardi 20 novembre 2018 | 3 - 6 PM</mat-card-subtitle>
@@ -64,10 +78,8 @@
         </mat-chip-list>
       </mat-card-actions>
     </mat-card>
-  </a>
   
-  <a routerLink="/events/2" class="unlink">
-    <mat-card class="card-box">
+    <mat-card class="card" routerLink="/events/2">
       <mat-card-header>
         <mat-card-title>Bataille d'OREILLERS </mat-card-title>
         <mat-card-subtitle>Mardi 6 avril 2019 | 3 - 6 PM</mat-card-subtitle>
@@ -87,10 +99,8 @@
         </mat-chip-list>
       </mat-card-actions>
     </mat-card>
-  </a>
   
-  <a routerLink="/events/1" class="unlink">
-    <mat-card class="card-box">
+    <mat-card class="card" routerLink="/events/3">
       <mat-card-header>
         <mat-card-title>Cache Cache GEANT Ikea </mat-card-title>
         <mat-card-subtitle>Mardi 20 novembre 2018 | 3 - 6 PM</mat-card-subtitle>
@@ -110,35 +120,44 @@
         </mat-chip-list>
       </mat-card-actions>
     </mat-card>
-  </a>
 
 
   <br>
   <br>
   <br>
 
-  <h2 class="title red-medium-dark">Devenez ambassadeur</h2>
 
-  <br>
-  <br>
-  <mat-card class="card-box">
-    <img mat-card-image src="/assets/img/cash.jpg" alt="Photo of a Shiba Inu">
+  <h2 class="title">Dans toutes la france</h2>
+  <mat-card class="card-img" routerLink="/cities">
+    <img mat-card-image src="/assets/img/city.jpg" alt="city">
   </mat-card>
 
-  <mat-card class="card-box">
-    <img mat-card-image src="/assets/img/fun.jpg" alt="Photo of a Shiba Inu">
+
+  <br>
+  <br>
+  <br>
+
+
+  <h2 class="title">Devenez ambassadeur</h2>
+
+  <mat-card class="card-img" routerLink="/ambassador">
+    <img mat-card-image src="/assets/img/cash.jpg" alt="Gagner de l'argent">
   </mat-card>
 
-  <mat-card class="card-box">
-    <img mat-card-image src="/assets/img/party.jpg" alt="Photo of a Shiba Inu">
+  <mat-card class="card-img" routerLink="/ambassador">
+    <img mat-card-image src="/assets/img/amuser.jpg" alt="Photo of a Shiba Inu">
+  </mat-card>
+
+  <mat-card class="card-img" routerLink="/ambassador">
+    <img mat-card-image src="/assets/img/reunir.jpg" alt="Réunissez vous">
   </mat-card>
   <br>
   <br>
   <br>
   <br>
+<!-- 
+  <h2 class="title">Nos Partenaires</h2>
 
-  <h2 class="title red-medium-light">Nos Partenaires</h2>
-
   <br>
   <br>
   <br>
@@ -168,12 +187,9 @@
   <br>
   <br>
 
-  <h2 class="title red-light">Il parle de nous</h2>
+  <h2 class="title">Il parle de nous</h2> -->
 
 </div>
 
 
 
-<!-- 
-
- -->
