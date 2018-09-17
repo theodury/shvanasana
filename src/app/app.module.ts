@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 
@@ -20,6 +20,8 @@ import { DomSanitizer } from "@angular/platform-browser";
 import { AuthenticationService, UserService, AlertService } from './_services';
 import { AuthGuard } from './_guards';
 import { CanvasComponent } from './canvas/canvas.component';
+import { Interceptor } from './_core/interceptor';
+import { TokenStorage } from './_core/token.storage';
 
 
 @NgModule({
@@ -41,7 +43,11 @@ import { CanvasComponent } from './canvas/canvas.component';
     MatCardModule
 
   ],
-  providers: [AuthGuard, AuthenticationService, UserService, AlertService],
+  providers: [AuthGuard, AuthenticationService, UserService, AlertService, TokenStorage,
+    {provide: HTTP_INTERCEPTORS,
+    useClass: Interceptor,
+    multi : true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { AlertService, AuthenticationService } from '../../_services';
+import { TokenStorage } from '../../_core/token.storage';
 
 
 @Component({
@@ -21,6 +22,7 @@ export class LoginComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
+        private token: TokenStorage,
         private alertService: AlertService) { }
 
     ngOnInit() {
@@ -49,14 +51,16 @@ export class LoginComponent implements OnInit {
 
         this.loading = true;
         this.authenticationService.login(this.f.email.value, this.f.password.value)
-            .pipe(first())
-            .subscribe(
-                data => {
-                    this.router.navigate([this.returnUrl]);
-                },
-                error => {
-                    this.alertService.error(error);
-                    this.loading = false;
-                });
+        .subscribe(
+            data => {
+              this.token.saveToken(data.token);
+              this.router.navigate(['user']);
+            },
+            error => {
+                this.alertService.error(error);
+                this.loading = false;
+            }
+        );
+                
     }
 }
